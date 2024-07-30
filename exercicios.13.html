@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Número por Extenso- exercicios 13</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Converter Número para Texto</h1>
+    <form id="formulario">
+        <label for="numero">Digite um número entre 0 e 10:</label>
+        <input type="number" id="numero" min="0" max="10" required>
+        <button type="button" onclick="converterNumero()">Converter</button>
+    </form>
+    <p id="resultado"></p>
+    <script>
+        function converterNumero() {
+            const numero = parseInt(document.getElementById('numero').value, 10);
+            let texto;
+            switch (numero) {
+                case 0:
+                    texto = 'Zero';
+                    break;
+                case 1:
+                    texto = 'Um';
+                    break;
+                case 2:
+                    texto = 'Dois';
+                    break;
+                case 3:
+                    texto = 'Três';
+                    break;
+                case 4:
+                    texto = 'Quatro';
+                    break;
+                case 5:
+                    texto = 'Cinco';
+                    break;
+                case 6:
+                    texto = 'Seis';
+                    break;
+                case 7:
+                    texto = 'Sete';
+                    break;
+                case 8:
+                    texto = 'Oito';
+                    break;
+                case 9:
+                    texto = 'Nove';
+                    break;
+                case 10:
+                    texto = 'Dez';
+                    break;
+                default:
+                    texto = 'Número fora do intervalo.';
+                    break;
+            }
+            document.getElementById('resultado').innerText = texto;
+        }
+    </script>
+</body>
+</html>
